@@ -1,0 +1,45 @@
+# Local editor and connector configuration
+.mcp.json
+.claude/
+
+# Generated previews, screenshots, MCP responses and test logs
+docx_preview/
+fresh_prototype/*.json
+fresh_prototype/*.png
+fresh_prototype/*results*
+fresh_prototype/*backup*
+fresh_prototype/*preview*
+fresh_prototype/*diagnos*
+fresh_prototype/*capture*
+fresh_prototype/*state*
+fresh_prototype/*calls*
+fresh_prototype/*install*
+fresh_prototype/*test*
+fresh_prototype/*slot*
+fresh_prototype/*drive_diag*
+fresh_prototype/*latest*
+fresh_prototype/*current*
+fresh_prototype/*original*
+fresh_prototype/*before*
+fresh_prototype/*sources*
+fresh_prototype/*geometry*
+fresh_prototype/*scenery_*
+fresh_prototype/*onboarding_*
+fresh_prototype/*parking_*
+fresh_prototype/*plaza_*
+fresh_prototype/*return_sprint_*
+fresh_prototype/*garage_tiers_*
+fresh_prototype/*duplicate_vans_*
+fresh_prototype/*persistence_*
+fresh_prototype/*easy_parking_*
+fresh_prototype/*final_*
+fresh_prototype/*continuous_*
+fresh_prototype/*held_*
+fresh_prototype/*progression_*
+fresh_prototype/*sale_*
+fresh_prototype/*world_preview*
+fresh_prototype/PracticeYard_DraftSources.rbxmx
+
+# Local operating-system files
+Thumbs.db
+.DS_Store

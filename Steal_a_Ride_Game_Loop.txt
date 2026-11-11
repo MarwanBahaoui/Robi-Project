@@ -1,0 +1,159 @@
+Steal a Ride
+
+Game loop and first prototype
+
+Updated 4 November 2026  |  Starting theme: vans  |  Incremental collection game
+
+Steal vans from guarded NPC lots and bring them home. Keep a van for passive income or sell it to an NPC trader for immediate cash. Every newly secured type advances a permanent collection of eight discoveries.
+
+STEAL  >  ESCAPE  >  EARN  >  UPGRADE  >  REPEAT
+
+The game loop
+
+Step: 1  Choose
+Player action: Compare income, sale value and security.
+Result: Choose an earner, a sale or a discovery.
+Example: Target a missing collection type.
+
+Step: 2  Approach
+Player action: Walk freely to the van and its Steal prompt.
+Result: The guard stays stationary until you steal.
+Example: No waiting for a patrol.
+
+Step: 3  Steal
+Player action: Press Steal and enter in a brief animation.
+Result: Alarm sounds; guard reacts before chasing.
+Example: Gain control and a short head start.
+
+Step: 4  Escape
+Player action: Follow a simple road back to the garage.
+Result: The guard stops chasing at the boundary.
+Example: First ride has one obvious route.
+
+Step: 5  Secure
+Player action: Bring the stolen van across the safe zone.
+Result: Register its discovery permanently.
+Example: Collection advances from 0/8 to 1/8.
+
+Step: 6  Earn or sell
+Player action: Park it for income or sell it to the trader.
+Result: Choose ongoing earnings or immediate cash.
+Example: Rusty van earns $1/s if kept.*
+
+Step: 7  Upgrade
+Player action: Improve getaway acceleration or buy a slot.
+Result: Get moving faster or earn from more vans.
+Example: Expand from two slots to three.
+
+Step: 8  Repeat
+Player action: Find missing types and attempt better thefts.
+Result: Complete eight discoveries to open a new lot.
+Example: Keep discoveries even after sales.
+
+* Income values are illustrative. Prices, timers and rewards must be balanced through testing.
+
+The main hook: you escape in the vehicle you just stole. Guards react to the theft; the challenge starts with the getaway. Test that activity before adding a large economy.
+
+Progression and player rules
+
+Guards wait at their posts until a theft triggers an alarm. Give the player vehicle control and a brief, readable head start before pursuit. NPC targets keep the loop playable alone.
+
+Situation: Caught by a guard
+Rule: The guard ejects the player with a short, comic ragdoll push onto safe ground. Recover automatically; return the stolen van to its lot. No money, upgrade or secured-van loss.
+
+Situation: After the knockback
+Rule: End the pursuit. Give a brief on-foot sprint boost and capture protection so the player can return home or approach another theft. Neither stacks; both end on starting a theft or entering a vehicle.
+
+Situation: Entering the garage
+Rule: The guard stops immediately at the marked boundary and returns to its stationary post. Record a discovery only when the stolen van itself crosses into the garage.
+
+Situation: Full garage
+Rule: Place the incoming van in one non-earning arrival bay. Sell a parked van to free a slot, or sell the incoming van. Resolve this choice before starting another theft; no automatic discard.
+
+Situation: Selling a van
+Rule: Show the trader price, lost income per second and a confirmation. Remove that van and pay once. Its discovery stays recorded. No separate automatic theft cash bonus.
+
+Situation: Duplicate vehicle
+Rule: A duplicate gives no new discovery and cannot create a second earning copy of the same type. Sell it to the trader for cash.
+
+Situation: Collecting income
+Rule: Parked vans add to a single garage balance. Collect with one interaction. Income continues during thefts in the same session.
+
+Situation: Safe progress
+Rule: Only one stolen van can be in transit. Other players cannot steal secured vans in the initial version. Save an unresolved arrival-bay van so reconnecting does not lose it.
+
+Make capture funny and fair
+
+Show a warning before capture. Keep the ragdoll brief and land the player clear of hazards and walls. Restore control as soon as they stand up. The guard returns to its stationary post instead of repeatedly knocking them down. The first theft has generous reaction time and no escape countdown.
+
+Collections and meaningful choices
+
+Eight discoveries in each collection
+
+Each themed collection contains eight distinct van types. A type counts the first time it reaches the garage safely, not when it is merely entered or spotted. Show eight silhouettes and a clear progress counter. Selling a van never removes its discovery; owning eight parking slots is not required.
+
+Finishing 8/8 unlocks the next collection lot. Make all eight types obtainable with current-area equipment and show where missing types can be found. Avoid rare random spawns that leave a player stuck at 7/8. The prototype uses a small test collection; the eight-type structure is validated in a later content test.
+
+Keep for income or sell for cash
+
+Keep valuable earners to improve long-term income. Sell lower earners or duplicates when immediate cash is more useful. The trader replaces discarding and the former automatic theft reward; the player earns sale cash only when a secured van is actually sold. There is no permanent vehicle storage beyond parked vans and one arrival bay.
+
+Show sale prices before a theft and warn when selling the last earning van. Keep an easy starter target available so an empty garage is recoverable. Balance sale cash against passive income and theft duration so neither keeping everything nor repeatedly selling the easiest van always wins.
+
+Two upgrades to start with
+
+Getaway acceleration: a persistent player upgrade that helps each stolen van reach its normal top speed faster. Preserve differences between vehicle types and keep the first theft achievable without upgrades. Garage capacity: start with two earning slots and offer one extra slot in the prototype. Exact upgrade strength and cost need playtesting.
+
+Give each target a different tradeoff
+
+Vehicle: Rusty van
+Appeal: Easy starter discovery.
+Challenge: Slow guard reaction and a simple road home.
+
+Vehicle: Armored van
+Appeal: Higher earning potential.
+Challenge: Slower acceleration requires a clean start.
+
+Vehicle: Sport van
+Appeal: Fast getaway.
+Challenge: A quicker guard reaction after the theft.
+
+Keep roads readable throughout. The first route is short, wide and obvious, without tight turns or branching decisions. Introduce optional shortcuts only after the player understands driving. Vary guard reaction times, vehicle handling and target placement. Never let a guard capture the player before driving controls are available.
+
+Build and test the first version
+
+The first session
+
+Show a starter van with its income, trader value and a clear road home. The player approaches freely and presses Steal. A brief entry animation leads into vehicle control; the alarm and guard reaction signal the chase. At the garage, the guard leaves and the discovery registers. Park the first van to establish income; introduce selling on a later return.
+
+Aim for a first successful theft in roughly one to two minutes, followed shortly by an affordable upgrade. These are design targets to test, not proven benchmarks.
+
+Prototype scope
+
+Build first: World and challenge
+Include: One compact map, one garage, one lot, one stationary NPC guard that reacts to theft, and one short, wide road home.
+
+Build first: Vehicles and upgrades
+Include: Three van types; two earning slots plus one purchasable slot; one getaway-acceleration upgrade.
+
+Build first: Economy and collection
+Include: NPC trader, session income, one arrival bay, permanent discoveries and sale confirmations.
+
+Build first: Readable failure
+Include: Guard warnings, a short ragdoll ejection, a temporary sprint boost and capture protection, and a garage boundary that ends pursuit.
+
+Test in two stages: first use three types and a clearly labeled 3/3 test collection to validate stealing, selling and upgrading. Then expand to eight types and test the real 8/8 unlock. Do not show unreachable 8/8 progress in the three-van build.
+
+Before a public playtest, save money, collection and upgrades reliably, and validate rewards and purchases on the server. Local prototypes can use temporary progress.
+
+What to watch in playtests
+
+Observe 5–10 new players. Do they understand that stealing triggers the guard and get time to drive? Can they explain keep versus sell, clear a full garage and retain discoveries after sales? Do they enjoy capture and choose to retry? Check that sprint protection ends on the next theft and that acceleration upgrades feel useful.
+
+Track waiting for cash, repeated farming of one easy target and players stuck on a final missing discovery. Fix confusing objectives and unfair capture before adding content. Small tests find design problems; they do not prove demand.
+
+Keep the scope small
+
+Defer player raids, player-to-player trading, combat, rebirths, offline income, large cities, advanced police chases and monetization. The NPC trader is part of the first version. Expand beyond vans only after the core loop earns repeat play.
+
+Thumbnail direction: silver van $1/s to gold van $9,999/s. These are concept numbers; the final thumbnail must match the actual game. The design has not yet been built or playtested.
